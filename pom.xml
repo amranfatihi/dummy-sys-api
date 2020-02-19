@@ -5,7 +5,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>dummy-sys-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
 	<name>dummy-sys-api</name>
@@ -25,14 +25,6 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-					<sharedLibraries>
-						<sharedLibrary>
-							<groupId>net.sf.jt400</groupId>
-							<artifactId>jt400</artifactId>
-						</sharedLibrary>
-					</sharedLibraries>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -53,7 +45,6 @@
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
-						<loggingCustomLog4JEnabled>true</loggingCustomLog4JEnabled>
 						<!-- note: setting *OSv2 or persistent queues* via `cloudHubDeployment` 
 							or mule-maven-plugin not yet available. enhancement request already created. -->
 						<properties>
@@ -125,7 +116,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub OWNER Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+			<url>https://maven.pkg.github.com/amranfatihi/dummy-sys-api</url>
 		</repository>
 	</distributionManagement>
 
